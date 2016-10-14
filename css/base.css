@@ -1,0 +1,260 @@
+*,
+::before, ::after {
+    margin: 0;
+    padding: 0;
+    /*运用非固定像素布局*/
+    box-sizing: border-box;
+    /*兼容移动端浏览器*/
+    -webkit-box-sizing: border-box;
+    /*轻击 清除移动端点击高亮显示*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    /*默认浏览器字体*/
+    font-family: Microsoft YaHei, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+input[type="tel"], input[type="text"], input[type="search"], textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    /*清除移动端默认的阴影效果*/
+    -webkit-appearance: none; /*设置表单元素不自带浏览器默认样式*/
+}
+
+/*===========common css  公用样式*/
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+/*清除浮动*/
+.clearfix::before, .clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*.box {*/
+    /*width: 100%;*/
+/*}*/
+
+.navbar {
+    margin-bottom: 0;
+}
+.navbar_nav{
+    width: 100%;
+    border-bottom: none;
+    z-index: 1000;
+}
+.navbar_zm {
+    height: 86px;
+}
+.navbar_zm button{
+    margin-top: 25px;
+}
+.navbar_zm a {
+    display: block;
+    position: relative;
+}
+
+.navbar_zm a {
+    display: block;
+    width: 163.66px;
+    height: 84px;
+}
+
+.navbar_zm a .logo {
+    width: 146px;
+    height: 36px;
+    background-image: url(../zmimg/LOGO.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25px;
+    left: 13px;
+}
+
+.navbar-default {
+    background-color: #fff;
+    /*border:none;*/
+}
+
+.navbar-default .navbar-nav {
+    /*height: 86px;*/
+    line-height: 86px;
+}
+
+.navbar-default .navbar-nav li {
+    padding-left: 20px;
+}
+
+.navbar-default .navbar-nav a {
+    width: 60px;
+    height: 45px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    white-space: nowrap;
+    /*line-height: 70px;*/
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: blue;
+}
+
+/*轮播图*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dest .m_img {
+    width: 100%;
+    display: block;
+}
+
+.dest .m_img img {
+    width: 100%;
+    display: block;
+}
+
+.dest .pc_img {
+    height: 700px;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*主体部分*/
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+main {
+    background-color: #fff;
+}
+
+main .fist_box, main .second_box {
+    padding-top: 60px;
+    padding-bottom: 62px;
+}
+
+main .fist_box a, main .second_box a {
+    display: block;
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    line-height: 30px;
+    font-weight: 300;
+    font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+}
+
+main .fist_box a:nth-child(2), main .second_box a:nth-child(2) {
+    margin-top: 20px;
+}
+
+main .fist_box a:nth-child(2):hover, main .second_box a:nth-child(2):hover {
+    text-decoration: none;
+    color: darkolivegreen;
+}
+main .fist_box a:nth-child(1){
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+main .fist_box a:nth-child(1):hover{
+    transform: rotateY(180deg);
+}
+main .second_box a:nth-child(1){
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    /*tranform-origin:left-center;*/
+}
+main .second_box a:nth-child(1):hover{
+    /*transform: ;*/
+    transform:scale(-1,-1) rotateZ(360deg);
+}
+main section:last-child {
+    background: #f3f3f3;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border: 0;
+}
+
+@media (max-width: 768px ) {
+    main .fist_box div:nth-child(2), main .fist_box div:nth-child(3):last-child {
+        margin-top: 20px;
+    }
+
+    main .second_box div:nth-child(2), main .second_box div:nth-child(3):last-child {
+        margin-top: 20px;
+    }
+}
+
+/*底部分*/
+footer {
+    width: 100%;
+    font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+    padding: 90px 0px 0px;
+    background: rgb(247, 247, 247);
+    font-size: 16px;
+}
+
+footer .footer_box dt {
+    display: block;
+    font-size: 24px;
+    color: rgb(161, 161, 161);
+    font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+    margin: 0px 0px 10px;
+}
+
+footer .footer_box dd {
+    margin-top: 5px;
+    /*translateX: 0px;*/
+    transition: all 1s;
+}
+
+footer .footer_box a {
+    display: block;
+    text-decoration: none;
+}
+
+footer .footer_box dd:hover {
+    text-decoration: none;
+    color: red;
+    transform: translateX(10px);
+}
+footer .footer_bottom{
+   padding-top: 240px;
+    padding-bottom: 20px;
+}
+
